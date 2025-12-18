@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Домашка FasAPI</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <nav>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for(html_main_page) }}">Главная страница</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Список литературы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for(html_about) }}">О проекте</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-disabled="true">...</a>
+          </li>
+        </ul>
+    </nav>
+
+
+    {% block header %}
+
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+
+    {% endblock %}
+</body>
+
+<footer>
+    <div class="spinner-border text-primary" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-secondary" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-success" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-danger" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-warning" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Загрузка...</span>
+</div>
+<div class="spinner-border text-light" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+<div class="spinner-border text-dark" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+
+</footer>
+</html>

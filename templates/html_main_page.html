@@ -1,99 +1,105 @@
-{% extends base.html %}
+{% extends 'base.html' %}
+
 
 {% block title %}
-	<h1>Добро пожаловать на главную страницу домашки!</h1>
+    <h1>Добро пожаловать на главную страницу домашки!</h1>
 {% endblock %}
 
 {% block body %}
-	<p>
-        <h2>Домашнее задание "Веб-приложение на FastAPI"</h2>
-        <h3>Задача:</h3>
-            <ul>
-                <li><b>скопируйте папку homework_05 для этой домашки
-                    (Памятка: <a href="https://github.com/OtusTeam/BasePython/tree/homeworks">
-                    https://github.com/OtusTeam/BasePython/tree/homeworks</a>)
-                  используйте следующие пакеты:</b>
-                    <ul><em><p class="lead">
-                        <li>FastAPI</li>
-                        <li>uvicorn</li>
-                        </em></p>
-                    </ul>
+    <p>
+    <h2>Домашнее задание "Веб-приложение на FastAPI"</h2>
+    <h3>Задача:</h3>
+    <ul>
+        <li><b>скопируйте папку homework_05 для этой домашки
+            (Памятка: <a href="https://github.com/OtusTeam/BasePython/tree/homeworks">
+                https://github.com/OtusTeam/BasePython/tree/homeworks</a>)
+            используйте следующие пакеты:</b>
+            <ul><em class="lead">
+                <li>FastAPI</li>
+                <li>uvicorn</li>
+            </em>
+            </ul>
+        </li>
+        <li><b>в модуле app создайте базовое FastAPI приложение</b></li>
+        <li><b>создайте обычные представления</b>
+            <ul><em class="lead">
+                <li>
+                    создайте index view /
                 </li>
-                <li> <b>в модуле app создайте базовое FastAPI приложение</li></b>
-                <li><b>создайте обычные представления</b>
-                    <ul><em><p class="lead">
-                        <li>
-                            создайте index view /
-                        </li>
-                        <li>
-                            добавьте страницу /about/, добавьте туда текст, информацию о сайте и разработчике
-                        </li>
-                        <li>
-                            создайте базовый шаблон (используйте <a href=https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)>
-                            https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
-                        </a>
-                        </li>
-                        <li>
-                            в базовый шаблон подключите статику Bootstrap 5 (подключите стили), примените стили Bootstrap
-                        </li>
-                        <li>
-                            в базовый шаблон добавьте навигационную панель nav (<a href=https://getbootstrap.com/docs/5.0/components/navbar/>
-                            https://getbootstrap.com/docs/5.0/components/navbar/</a>)
-                        </li>
-                        <li>
-                            в навигационную панель добавьте ссылки на главную страницу / и на страницу /about/ при помощи url_for
-                        </li>
-                        <li>
-                            добавьте новые зависимости в файл requirements.txt в корне проекта (лучше вручную, но можно командой pip freeze > requirements.txt, тогда обязательно проверьте, что туда попало, и удалите лишнее)
-                        </li>
-                        </em></p>
-                    </ul>
+                <li>
+                    добавьте страницу /about/, добавьте туда текст, информацию о сайте и разработчике
                 </li>
-                <li><b>создайте api представления:</b>
-                    <ul><em><p class="lead">
-                        <li>
-                            создайте api router, укажите префикс /api
-                        </li>
-                        <li>
-                            добавьте вложенный роутер для вашей сущности (если не можете придумать тип сущности, рассмотрите варианты: товар, книга, автомобиль)
-                        </li>
-                        <li>
-                            добавьте представление для чтения списка сущностей
-                        </li>
-                        <li>
-                            добавьте представление для чтения сущности
-                        </li>
-                        <li>
-                            добавьте представление для создания сущности
-                        </li>
-                        </em></p>
-                    </ul>
+                <li>
+                    создайте базовый шаблон (используйте <a
+                        href=https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)>
+                    https://getbootstrap.com/docs/5.0/getting-started/introduction/#starter-template)
+                </a>
                 </li>
+                <li>
+                    в базовый шаблон подключите статику Bootstrap 5 (подключите стили), примените стили Bootstrap
+                </li>
+                <li>
+                    в базовый шаблон добавьте навигационную панель nav (<a
+                        href=https://getbootstrap.com/docs/5.0/components/navbar/>
+                    https://getbootstrap.com/docs/5.0/components/navbar/</a>)
+                </li>
+                <li>
+                    в навигационную панель добавьте ссылки на главную страницу / и на страницу /about/ при помощи
+                    url_for
+                </li>
+                <li>
+                    добавьте новые зависимости в файл requirements.txt в корне проекта (лучше вручную, но можно командой
+                    pip freeze > requirements.txt, тогда обязательно проверьте, что туда попало, и удалите лишнее)
+                </li>
+            </em>
+            </ul>
+        </li>
+        <li><b>создайте api представления:</b>
+            <ul><em class="lead">
+                <li>
+                    создайте api router, укажите префикс /api
+                </li>
+                <li>
+                    добавьте вложенный роутер для вашей сущности (если не можете придумать тип сущности, рассмотрите
+                    варианты: товар, книга, автомобиль)
+                </li>
+                <li>
+                    добавьте представление для чтения списка сущностей
+                </li>
+                <li>
+                    добавьте представление для чтения сущности
+                </li>
+                <li>
+                    добавьте представление для создания сущности
+                </li>
+            </em>
+            </ul>
+        </li>
 
-            </ul>
-        <h3>Критерии оценки:</h3>
-            <ul>
-                <li>
-                    создано FastAPI приложение в app.py
-                </li>
-                <li>
-                    добавлен отдельный роутер для HTML представлений / и /about/
-                </li>
-                <li>
-                    добавлен api роутер
-                </li>
-                <li>
-                    добавлен роутер для ваших сущностей
-                </li>
-                <li>
-                    подключены и применены стили Bootstrap
-                </li>
-                <li>
-                    в базовый шаблон добавлена навигационная панель
-                </li>
-                <li>
-                    автоматический тест test_homework_05 проходит
-                </li>
-            </ul>
+    </ul>
+    <h3>Критерии оценки:</h3>
+    <ul>
+        <li>
+            создано FastAPI приложение в app.py
+        </li>
+        <li>
+            добавлен отдельный роутер для HTML представлений / и /about/
+        </li>
+        <li>
+            добавлен api роутер
+        </li>
+        <li>
+            добавлен роутер для ваших сущностей
+        </li>
+        <li>
+            подключены и применены стили Bootstrap
+        </li>
+        <li>
+            в базовый шаблон добавлена навигационная панель
+        </li>
+        <li>
+            автоматический тест test_homework_05 проходит
+        </li>
+    </ul>
     </p>
 {% endblock %}

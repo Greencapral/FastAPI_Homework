@@ -22,11 +22,12 @@
 from fastapi import FastAPI
 import uvicorn
 from routers.api_router import router as api_router
+from routers.html_index import router as index_router
 
 app = FastAPI()
 
 app.include_router(api_router, prefix="/api")
-
+app.include_router(index_router)
 
 
 

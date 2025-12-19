@@ -63,7 +63,7 @@ async def html_book_add(request: Request):
 async def html_book_add(request: Request, author: str = Form(...), title: str = Form(...), year: str = Form(...),
                         description: str = Form(...)):
     """
-    Функция принимает данные и записывает новую запись в список
+    Функция принимает данные и записывает новую запись в список с возвратом на список
     """
     max_id = len(books_list)
     new_book = BookForEdit(id = max_id, author=author, title=title, year=year, description=description)

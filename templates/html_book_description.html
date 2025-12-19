@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <title>Детальная информация о книге</title>
+{% endblock %}
+
+{% block body %}
+    <p class="h4">Книгу написал: {{ book.author }}</p>
+    <h1 class="display-6">Наименование книги: {{ book.title }}</h1>
+    <figcaption class="blockquote-footer">
+        год издания: <cite title="Source Title">{{ book.year }}</cite>
+    </figcaption>
+
+
+
+    <p class="lead">
+        Краткое описание: {{ book.description }}
+    </p>
+
+{% endblock %}
+

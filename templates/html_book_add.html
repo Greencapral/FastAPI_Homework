@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <title>Добавление новой книги</title>
+{% endblock %}
+
+{% block body %}
+    <form id="new_book" action="/addbook/" method="POST">
+        <div class="input-group" style="width: 30%">
+            <span class="input-group-text">Автор:</span>
+            <textarea name="author" class="form-control" aria-label="New_book" style="height: 30px"></textarea>
+        </div>
+        <div class="form-text" id="basic-addon4">Фамилия и инициалы писателя</div>
+
+        <div class="input-group" style="width: 50%">
+            <span class="input-group-text">Наименование:</span>
+            <textarea name="title" class="form-control" aria-label="New_book" style="height: 30px"></textarea>
+        </div>
+        <div class="form-text" id="basic-addon4">Полное название книги</div>
+
+        <div class="input-group" style="width: 15%">
+            <span class="input-group-text">Год издания:</span>
+            <textarea name="year" class="form-control" aria-label="New_book" style="height: 30px"></textarea>
+        </div>
+        <div class="form-text" id="basic-addon4"></div>
+        <div class="input-group" style="width: 50%">
+            <span class="input-group-text">Дополнительная информация:</span>
+            <textarea name="description" class="form-control" aria-label="New_book" style="height: 30px"></textarea>
+        </div>
+        <div class="form-text" id="basic-addon4">О чём книга</div>
+
+        {#    <a class="nav-link active" aria-current="page" href="{{ url_for('html_done') }}">#}
+        <div style="margin: 10px;">
+            <button type="submit" class="btn btn-primary">
+                Добавить
+            </button>
+    </form>
+    </div>
+
+
+
+
+
+
+{% endblock %}
+

@@ -5,9 +5,8 @@ from typing import Optional
 class BaseBook(BaseModel):
     id: int
     title: str
-    title: str
     author: str
-    year: int
+    year: str
     description: str
 
 
@@ -15,45 +14,45 @@ class BookForEdit(BaseBook):
     id: Optional[int] = None
     title: Optional[str] = None
     author: Optional[str] = None
-    year: Optional[int] = None
+    year: Optional[str] = None
     description: Optional[str] = None
 
 
-book_list = [
+books_list = [
+    BaseBook(
+        id=0,
+        title="Чистый Python: тонкости программирования для профи",
+        author="Бейдер, Д.",
+        year="2022",
+        description="288 с.",
+    ),
     BaseBook(
         id=1,
-        title="Book 1",
-        author="111",
-        year=2003,
-        description="Book 1",
+        title="Python для сложных задач: наука о данных и машинное обучение",
+        author="Вандер Плас, Дж.",
+        year="2022",
+        description="576 с.",
     ),
     BaseBook(
         id=2,
-        title="Book 2",
-        author="222",
-        year=2000,
-        description="Book 2",
+        title="Разработка веб‑приложений с использованием Flask на языке Python: практическое руководство",
+        author="Гринберг, М.",
+        year="2023",
+        description="273 с.",
     ),
     BaseBook(
         id=3,
-        title="Book 3",
-        author="333",
-        year=2005,
-        description="@@@Book 3",
+        title="Программируем на Python",
+        author="Доусон, М.",
+        year="2022",
+        description="416 с.",
     ),
     BaseBook(
         id=4,
-        title="Book 4",
-        author="444",
-        year=2003,
-        description="@@@Book 4",
-    ),
-    BaseBook(
-        id=5,
-        title="Book 5",
-        author="555",
-        year=2005,
-        description="@@@Book 5",
+        title="Введение в машинное обучение с помощью Python: руководство для специалистов по работе с данными",
+        author="Мюллер, А.",
+        year="2017",
+        description="480 с.",
     ),
 
 ]

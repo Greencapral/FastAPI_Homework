@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <title>Список книг о питоне</title>
+{% endblock %}
+
+{% block body %}
+    {% for book in books_list %}
+
+        <div class="card text-bg-success mb-3" style="max-width: 18rem;">
+            <div class="card-header">Книги о питоне</div>
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <p class="card-text">
+                <p>Автор книги: {{ book.author }}</p>
+                <p>Год издания: {{ book.year }}</p>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('html_book', id=book.id ) }}">
+                    <button type="button" class="btn btn-outline-info">Подробнее</button>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+{% endblock %}
+

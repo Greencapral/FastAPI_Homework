@@ -1,4 +1,3 @@
-from django.db.models.expressions import result
 from fastapi import APIRouter, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
